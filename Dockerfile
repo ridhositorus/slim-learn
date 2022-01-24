@@ -71,6 +71,9 @@ RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 RUN mv composer.phar /usr/local/bin/composer
 
+#WORKDIR /public
+#RUN php -S localhost:9999
+
 # Install NodeJS & NPM
 #RUN apt-get purge nodejs
 #RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
